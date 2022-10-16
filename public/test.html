@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+<script type="module">
+    WebAssembly.instantiateStreaming(fetch("math.wasm")).
+then(res=>{
+    var result=res.instance.exports.square(10);
+    console.log(result);
+});
+
+</script>
+    </head>
+    <body></body>
+</html>
